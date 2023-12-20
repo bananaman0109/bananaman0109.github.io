@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            background-color: #555;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: #333;
+        }
+
+        nav button {
+            padding: 10px;
+            background-color: #555;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, p {
+            color: #333;
+        }
+
+        /* Hovered Square Styles */
+        .hovered-square {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            background-color: #3498db; /* Initial color */
+            border-radius: 8px;
+            transition: all 1s ease-in-out;
+            cursor: pointer;
+        }
+
+        .hovered-square:hover {
+            transform: scale(1.5); /* Adjust the scale factor as needed */
+            background-color: #e74c3c; /* Change to a different color on hover */
+        }
+
+        /* Continuous animation for the hovered state */
+        @keyframes growAndChangeColor {
+            0% {
+                transform: scale(1);
+                background-color: #3498db;
+            }
+            50% {
+                transform: scale(1.5);
+                background-color: #e74c3c;
+            }
+            100% {
+                transform: scale(1);
+                background-color: #3498db;
+            }
+        }
+
+        .hovered-square:hover {
+            animation: growAndChangeColor 2s infinite; /* Adjust the duration as needed */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Web Page</h1>
+        <button onclick="showConfirmation()">Click here!</button>
+
+        <script>
+            function redirectToExample() {
+                window.location.href = 'https://www.coolmathgames.com/';
+            }
+
+            function showConfirmation() {
+                var isConfirmed = window.confirm('Are you sure?');
+                if (isConfirmed) {
+                    redirectToExample();
+                }
+                else {
+                    isConfirmed = window.confirm('Are you suuuuuuure?');
+                    if (isConfirmed) {
+                        redirectToExample();
+                    }
+                    else {
+                        window.confirm('you should do it.');
+                    }
+                }             
+            }
+        </script>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <h2>My Website</h2>
+        <p>Welcome to your web page! This is a simple template to get you started.</p>
+    </main>
+
+    <!-- Hovered Square -->
+    <a href="dance.html" class="hovered-square"></a>
+</body>
+</html>
